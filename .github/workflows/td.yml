@@ -36,7 +36,7 @@ jobs:
           echo "🔍 Validating Treasure Workflow files..."
           # Basic syntax check using td command (no auth needed for local validation)
           td workflow push test-validation-project \
-            --directory ./workflows \
+            --directory ./workflow \
             --revision ${{ github.sha }} \
             --dry-run || echo "Dry-run not fully supported - proceeding with basic check"
           
