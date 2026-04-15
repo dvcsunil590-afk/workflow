@@ -47,4 +47,4 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref }}"
           echo "Commit: ${{ github.sha }}"
-          ls -R ./workflows
+          ls -R ./workflow
