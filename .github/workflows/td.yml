@@ -19,10 +19,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Treasure Data Toolbelt (td command)
+      - name: Install Ruby and TD Toolbelt (td CLI)
         run: |
-          curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-focal-td-agent4.sh | sh
+          sudo apt-get update
+          sudo apt-get install -y ruby-full build-essential
+
+          # Install the official td gem
+          sudo gem install td --no-document
+
+          # Verify installation
           td --version
+          which td
 
       - name: Validate Workflow Syntax
         run: |
