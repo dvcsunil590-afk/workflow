@@ -1,0 +1,14 @@
++hello:
+  echo>: "Hello from Treasure Data CDP Workflow! 👋"
+  echo>: "This is a test for GitHub Actions integration."
+
++timestamp:
+  echo>: "Current session time: ${session_time}"
+
++cdp_example:
+  td>: |
+    SELECT 
+      'Test CDP Workflow' AS workflow_name,
+      CURRENT_TIMESTAMP AS executed_at
+    LIMIT 1
+  database: sample_datasets   # Change to your database later

@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'workflows/**'
-      - '.github/workflows/td-workflow-test.yml'
+      - '.github/workflows/td.yml'
   pull_request:
     branches: [ main, master ]
     paths:
